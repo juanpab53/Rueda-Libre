@@ -379,4 +379,38 @@ Qué control perdí:
     - Peso: unos 232 KB de CSS para usar solo la grilla, la tarjeta y el botón.
     - Más HTML: hay que repetir 4 clases col-* en cada tarjeta y añadir contenedores intermedios.
     - Igual que en mi versión, con siete modelos la última fila queda incompleta (1 tarjeta a 992 px, 3 a 1200 px).
+
+PROTOTIPO DE LA SECCIÓN PRINCIPAL CON TAILWIND (PLAY CDN)
+    Archivo: nocturna/prototipo.html
+    La página carga Tailwind con el Play CDN y arma la sección solo con utilidades, sin <style> ni style="":
+        - Espaciado: p-6, p-8, sm:p-12, space-y-6, space-x-8, px-8, py-4.
+        - Tamaños: w-full, max-w-3xl, max-w-xl, max-w-xs, min-h-screen.
+        - Colores: bg-slate-950, bg-slate-900, bg-amber-400, text-white, text-slate-300, text-slate-950, text-amber-400.
+        - Tipografía: text-xs, text-4xl, sm:text-6xl, font-semibold, font-bold, leading-tight,
+          leading-relaxed, tracking-tight, tracking-widest, uppercase.
+    La campaña muestra la etiqueta "Nuevo · Jueves a sábado", un único h1 "Rueda Nocturna", el subtítulo
+    "Descubre Medellín en bici cuando se encienden las luces", los datos "3 rutas" y "Desde $55.000", y el
+    enlace "Inscríbete" con apariencia de botón.
+
+    Botón "Inscríbete" en la semana 2 (Bootstrap):
+        Se construyó con un enlace que usa clases de componente ya resueltas:
+            <a class="btn btn-warning mt-auto" href="../pages/reservas.html">Reservar</a>
+        La clase btn aporta relleno, tamaño de letra, alineación y estados; btn-warning impone el color
+        amarillo del framework. Para acercarlo a la identidad de la marca había que sobrescribir estilos
+        con CSS propio. Fue rápido porque el botón ya venía diseñado.
+
+    Botón "Inscríbete" hoy (Tailwind):
+        Se construyó combinando utilidades sobre el mismo tipo de enlace, sin una clase "botón":
+            <a href="#inscripcion" class="inline-block w-full max-w-xs bg-amber-400 px-8 py-4
+            text-center text-sm font-bold uppercase tracking-widest text-slate-950 hover:bg-amber-300">
+            Inscríbete</a>
+        inline-block y text-center definen la forma; w-full y max-w-xs el ancho; px-8 y py-4 el relleno;
+        bg-amber-400 y text-slate-950 los colores; y text-sm, font-bold, uppercase y tracking-widest la
+        tipografía. hover:bg-amber-300 agrega el estado sin escribir CSS aparte.
+
+    Diferencia clave:
+        Un framework de componentes (Bootstrap) entrega piezas cerradas y ya estilizadas (btn, btn-warning)
+        que se usan tal cual o se sobrescriben. Un framework utility-first (Tailwind) entrega clases pequeñas
+        de una sola propiedad que se combinan para construir la pieza. En Bootstrap el diseño del botón está
+        decidido de antemano; en Tailwind se decide en el HTML, con más control pero más clases visibles.
  
