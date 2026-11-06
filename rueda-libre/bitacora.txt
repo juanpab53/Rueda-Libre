@@ -456,4 +456,46 @@ PROYECTO TAILWIND CON CLI Y BIBLIOTECA DE BOTONES
         Cada uno recibe el foco y muestra el anillo de 4 px; al pasar el ratón cambia el color de
         fondo (o de texto en el contorno). El foco no depende solo del color: el anillo agrega una
         forma visible alrededor del botón.
+
+REGLAS DEL KIT DE COMPONENTES
+    Página: nocturna/componentes.html
+    Componentes incluidos:
+        - Botones principal, secundario y de contorno (MiniReto 2).
+        - Card de la ruta Luces del Centro (MiniReto 3).
+        - Alertas de información, éxito y advertencia.
+        - Campos de correo y celular con etiqueta, texto de ayuda y foco visible.
+
+    Reglas aplicadas:
+        1. Radio: rounded-lg (0.5rem) en botones, card, etiqueta de nivel, alertas e inputs.
+           La card de index.html también se ajustó a rounded-lg para mantener la misma regla.
+        2. Espaciado: escala base de 4 px. Se usan p-4, p-6, px-3, px-4, px-8, py-1, py-2,
+           py-3, py-4, mt-1, gap-4, space-y-2, space-y-4, space-y-6 y space-y-10.
+        3. Colores: superficies bg-slate-950 y bg-slate-900, bordes border-slate-700 y
+           border-slate-800, texto text-white, text-slate-300 y text-slate-400, y acento
+           amber-400/300/200. Las alertas usan un color semántico con fondo al 10%: sky
+           (información), emerald (éxito) y amber (advertencia).
+        4. Sombras: shadow-md en botones; shadow-lg con hover:shadow-2xl en la card.
+        5. Foco: focus:outline-none + focus:ring-4 + focus:ring-amber-200 (o
+           focus:ring-slate-400 en el botón secundario) y focus:border-amber-400 en los inputs.
+        6. Estructura: las variantes comparten clases base; solo cambian los datos, el color
+           de la etiqueta de nivel y el contenido del texto.
+
+    Accesibilidad:
+        - La alerta de éxito usa role="status" y aria-live="polite" para que el lector de
+          pantalla la anuncie como aviso.
+        - La alerta informativa usa role="note" y la advertencia role="alert".
+        - Cada input tiene un <label for="..."> visible y aria-describedby apuntando al texto
+          de ayuda.
+        - Botones, enlaces e inputs son elementos nativos y reciben foco con Tab.
+
+    Verificación de generación de clases:
+        Se actualizó tailwind.config.js con content: ["./index.html", "./componentes.html"] y
+        se regeneró src/output.css. Las clases usadas en la página, como bg-sky-500/10,
+        border-l-4, focus:border-amber-400 y hover:shadow-2xl, aparecen en output.css.
+        bg-pink-500 sigue ausente porque no se usa en ningún archivo escaneado.
+
+    Publicación:
+        URL de GitHub Pages:
+        https://juanpab53.github.io/Ruta-Basica/rueda-libre/nocturna/componentes.html
+        La página queda disponible cuando el commit llega a main y se ejecuta el workflow de Pages.
  
