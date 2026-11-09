@@ -1,192 +1,277 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Ruta Básica | Riwi</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Rueda Libre | Inicio</title>
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-  </head>
-
-  <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-          <i class="bi bi-code-slash"></i>
-          Ruta Básica
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#inicio">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#proyectos">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#acerca">Acerca de</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://github.com/juanpab53/Ruta-Basica"
-                target="_blank"
-              >
-                GitHub <i class="bi bi-box-arrow-up-right"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="encabezado">
+    <a href="index.html" class="marca">
+      <img src="img/logo.png" alt="Logo provisional de rueda libre" width="60" height="60" />
+      <span class="marca-nombre">Rueda Libre</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <ul>
+        <li>
+          <a href="index.html" class="activo" aria-current="page">Inicio</a>
+        </li>
+        <li><a href="pages/tarifas.html">Tarifas y rutas</a></li>
+        <li><a href="pages/reservas.html">Reservas</a></li>
+      </ul>
     </nav>
+  </header>
+  <main id="contenido">
+    <h1>Alquiler de bicicletas y tours guiados en Medellín</h1>
 
-    <!-- HERO / PRESENTATION -->
-    <header class="hero text-center" id="inicio">
-      <div class="container">
-        <h1 class="display-4 fw-bold">Ruta Básica - Riwi</h1>
-
-        <p class="lead mt-3">
-          Un espacio para explorar, los proyectos web realizado durante el
-          desarrollo de la ruta basica en Riwi
-        </p>
-
-        <a href="#proyectos" class="btn btn-light btn-lg mt-3">
-          Explorar proyectos
-          <i class="bi bi-arrow-down"></i>
-        </a>
-      </div>
-    </header>
-
-    <!-- PROJECTS -->
-    <main class="container py-5" id="proyectos">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Mis proyectos y prácticas</h2>
-        <p class="text-muted">
-          Explora los diferentes trabajos realizados durante el proceso de
-          formación que requieren de interfaces web
+    <section id="quienes-somos">
+      <div class="portada-texto">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          <strong>Rueda Libre</strong> es un emprendimiento de Medellín que
+          alquila bicicletas y organiza recorridos guiados por la ciudad.
+          <a href="#encuentranos">Contáctanos</a>.
         </p>
       </div>
-
-      <div class="row g-4">
-        <section class="bg-white py-5" id="cards">
-          <!-- HTML 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card project-card h-100 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-filetype-html project-icon text-danger"></i>
-    
-                            <h5 class="card-title fw-bold mt-3">Prácticas HTML</h5>
-    
-                            <p class="card-text text-muted">
-                                Ejercicios de estructura, etiquetas y fundamentos del desarrollo
-                                web.
-                            </p>
-    
-                            <a href="./PracticasHtml/" class="btn btn-outline-danger">
-                                Explorar <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                -->
-          <!-- JAVASCRIPT 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card project-card h-100 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-filetype-js project-icon text-warning"></i>
-    
-                            <h5 class="card-title fw-bold mt-3">Prácticas JavaScript</h5>
-    
-                            <p class="card-text text-muted">
-                                Lógica, programación, funciones e interactividad en páginas web.
-                            </p>
-    
-                            <a href="./PracticasJavaScript/" class="btn btn-outline-warning">
-                                Explorar <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                -->
-          <!-- RUEDA LIBRE -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card project-card h-100 shadow-sm">
-              <div class="card-body text-center p-4">
-                <i class="bi bi-bicycle project-icon text-info"></i>
-
-                <h5 class="card-title fw-bold mt-3">Rueda Libre</h5>
-
-                <p class="card-text text-muted">
-                  Proyecto sobre bicicletas en Medellín y sus alrededores.
-                </p>
-
-                <a href="./rueda-libre/" class="btn btn-outline-info">
-                  Explorar <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <!-- ABOUT -->
-    <section class="bg-white py-5" id="acerca">
-      <div class="container text-center">
-        <h2 class="fw-bold mb-3">Acerca de este repositorio</h2>
-
-        <p class="text-muted mx-auto" style="max-width: 700px">
-          Este repositorio reúne mi proceso de aprendizaje durante la Ruta
-          Básica de Riwi. Aquí encontrarás ejercicios, experimentos y proyectos
-          que reflejan mi evolución en programación y desarrollo web.
+      <img src="img/cover.jpg" alt="Dibujo de una repartidora en bicicleta por la ciudad" width="500" height="500" />
+    </section>
+    <section id="nuestras-rutas">
+      <h2>Nuestras rutas</h2>
+      <article>
+        <img src="img/river-park.png" alt="Ciclista en la ruta Río y Parques">
+        <h3>Río y Parques</h3>
+        <p>Nivel: Fácil</p>
+      </article>
+      <article>
+        <img src="img/neighborhood.png" alt="Ciclista en la ruta Sabores de Barrio">
+        <h3>Sabores de Barrio</h3>
+        <p>Nivel: Medio</p>
+      </article>
+      <article>
+        <img src="img/palmas.png" alt="Ciclista en la ruta Reto Las Palmas">
+        <h3>Reto Las Palmas</h3>
+        <p>Nivel: Difícil</p>
+      </article>
+    </section>
+    <section id="nuestros-servicios">
+      <h2>Nuestros servicios</h2>
+      <article>
+        <h3>Alquiler por horas y días</h3>
+        <p>
+          Disfruta de la flexibilidad total ajustada a tus tiempos. El
+          alquiler de cualquier bicicleta
+          <strong>incluye casco y candado de alta seguridad</strong> sin costo
+          adicional. Ideal si buscas realizar un paseo
+          <em>espontáneo y rápido</em> por el centro urbano.
         </p>
-
-        <a
-          href="https://github.com/juanpab53"
-          target="_blank"
-          class="btn btn-dark mt-3"
-        >
-          <i class="bi bi-github"></i>
-          Visitar mi GitHub
-        </a>
-      </div>
+      </article>
+      <article>
+        <h3>Tours guiados urbanos</h3>
+        <p>
+          Recorre los puntos más icónicos y las joyas ocultas de la ciudad
+          junto a nuestros guías locales. Las rutas están adaptadas para todos
+          los niveles y garantizan una experiencia
+          <em>enriquecedora y segura</em>
+          para toda la familia.
+          <a href="pages/tarifas.html">Consulta los recorridos</a>.
+        </p>
+      </article>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-        <p class="mb-1">
-          Desarrollado por
-          <strong>Juan Pablo Aparicio</strong>
+    <section id="tipos-bicicletas">
+      <h2>Tipos de bicicletas</h2>
+      <article>
+        <h3>Bicicletas de ciudad</h3>
+        <p>
+          Muévete a tu propio ritmo y explora cada rincón de la ciudad con
+          total libertad. Todas las unidades cuentan con diseño liviano,
+          cambios fluidos y mantenimiento al día. Una excelente opción si
+          buscas una alternativa práctica, ecológica y ligera para tus
+          desplazamientos diarios.
         </p>
+        <p>
+          <a href="pages/reservas.html" class="btn-cta">
+            Reserva ahora<span class="sr-only"> una bicicleta de ciudad</span>
+          </a>
+        </p>
+        <img src="img/bicycle.jpg" alt="Dibujo de una bicicleta de ciudad" width="500" height="500" loading="lazy" />
+      </article>
 
-        <p class="text-secondary mb-0">Ruta Básica · Riwi · 2026</p>
-      </div>
-    </footer>
+      <article>
+        <h3>Bicicletas de montaña</h3>
+        <p>
+          Domina cualquier terreno irregular y desafía con seguridad senderos,
+          trochas y caminos destapados. Todas las unidades cuentan con
+          suspensión de alto rendimiento, llantas de gran agarre y
+          mantenimiento al día. Una excelente opción si buscas una aventura
+          llena de adrenalina y máxima estabilidad en la naturaleza.
+        </p>
+        <p>
+          <a href="pages/reservas.html" class="btn-cta">
+            Reserva ahora<span class="sr-only">
+              una bicicleta de montaña</span>
+          </a>
+        </p>
+        <img src="img/mountain-bicycle.jpg" alt="Dibujo de una bicicleta de montaña" width="500" height="500"
+          loading="lazy" />
+      </article>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <article>
+        <h3>Bicicletas eléctricas</h3>
+        <span class="annotation-new">Nuevo</span>
+        <p>
+          Supera cualquier pendiente sin esfuerzo o aventúrate por senderos
+          naturales. Todas las unidades cuentan con
+          <strong>batería de larga duración</strong> y mantenimiento al día.
+          Una excelente opción si prefieres un trayecto
+          <em>sin fatiga excesiva</em>.
+        </p>
+        <p>
+          <a href="pages/reservas.html" class="btn-cta">
+            Reserva ahora<span class="sr-only"> una bicicleta eléctrica</span>
+          </a>
+        </p>
+        <img src="img/electric-bicycle.jpg" alt="Dibujo de una bicicleta eléctrica" width="500" height="500"
+          loading="lazy" />
+      </article>
+    </section>
+    <section id="nuestra-flota">
+      <h2>Nuestra flota</h2>
+        <article class="tarjeta-bici">
+          <img src="img/clasic-urban.jpg" alt="bicicleta urbana clasica">
+          <h3>Urbana Clásica</h3>
+          <p>Cómoda y liviana para las ciclorrutas.</p>
+          <p><strong>Precio por hora:</strong>$10.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+        <article class="tarjeta-bici">
+          <img src="img/urban-fold.jpg" alt="bicicleta urbana clasica">
+          <h3>Urbana Plegable</h3>
+          <p>Se dobla en segundos; ideal para combinar con el metro.</p>
+          <p><strong>Precio por hora:</strong>$12.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+        <article class="tarjeta-bici">
+          <img src="img/mountain-trail.jpg" alt="bicicleta urbana clasica">
+          <h3>Montaña Trail</h3>
+          <p>Suspensión delantera y 21 cambios para las subidas.</p>
+          <p><strong>Precio por hora:</strong>$15.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+        <article class="tarjeta-bici">
+          <img src="img/gravel.jpg" alt="bicicleta urbana clasica">
+          <h3>Gravel Aventura</h3>
+          <p>Para rutas mixtas de asfalto y destapado.</p>
+          <p><strong>Precio por hora:</strong>$18.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+        <article class="tarjeta-bici">
+          <img src="img/electric-urban.jpg" alt="bicicleta urbana clasica">
+          <h3>Eléctrica Urbana</h3>
+          <p>Asistencia eléctrica con 45 km de autonomía.</p>
+          <p><strong>Precio por hora:</strong>$25.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+        <article class="tarjeta-bici">
+          <img src="img/kids.jpg" alt="bicicleta urbana clasica">
+          <h3>Infantil</h3>
+          <p>Para niños de 6 a 10 años.</p>
+          <p><strong>Precio por hora:</strong>$8.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+        <article class="tarjeta-bici">
+          <img src="img/tandem.jpg" alt="bicicleta urbana clasica">
+          <h3>Tándem</h3>
+          <p>Para dos personas; perfecta para pasear en pareja.</p>
+          <p><strong>Precio por hora:</strong>$20.000</p>
+          <a class="btn-cta" href="pages/reservas.html">Reservar</a>
+        </article>
+    </section>
+    <section id="como-alquilar">
+      <h2>¿Cómo alquilar?</h2>
+      <p>
+        <a href="pages/tarifas.html">Consulta las tarifas</a> antes de tomar
+        una decisión.
+      </p>
+      <ol>
+        <li>
+          Elige el modelo de bicicleta que mejor se adapte a tus necesidades.
+        </li>
+        <li>
+          Selecciona la duración de la reserva (horas o días completos).
+        </li>
+        <li>Presenta una identificación oficial válida y realiza el pago.</li>
+        <li>¡Recibe tu equipamiento y disfruta de tu recorrido!</li>
+      </ol>
+    </section>
+
+    <section id="beneficios">
+      <h2>Beneficios de nuestro servicio</h2>
+      <ul>
+        <li>
+          Equipamiento de seguridad y mapas de la ciudad incluidos de forma
+          gratuita.
+        </li>
+        <li>
+          Asistencia en carretera y soporte técnico durante todo el periodo de
+          alquiler.
+        </li>
+        <li>
+          Precios accesibles con descuentos especiales para grupos y reservas
+          anticipadas.
+        </li>
+      </ul>
+      <img src="img/route.jpg" alt="Mapa con la ruta ciclista recomendada a lo largo del parque principal" width="500"
+        height="500" loading="lazy" />
+    </section>
+
+    <section id="encuentranos">
+      <h2>Encuéntranos</h2>
+      <p>
+        Estamos ubicados en el corazón de la ciudad. Puedes ver nuestra
+        ubicación exacta en el siguiente
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+          mapa interactivo<span class="sr-only">
+            (se abre en una pestaña nueva)</span> </a>.
+      </p>
+      <p>
+        ¿Tienes alguna duda? Escríbenos a nuestro correo electrónico:
+        <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
+      </p>
+    </section>
+  </main>
+  <a class="whatsapp-flotante" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp en una pestaña nueva">WhatsApp</a>
+  <footer class="pie">
+    <div class="pie__marca">
+      <p class="pie__nombre">Rueda Libre</p>
+      <address class="pie__contacto">
+        <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+      </address>
+    </div>
+
+    <nav class="pie__menu" aria-label="Secundaria">
+      <ul>
+        <li><a href="pages/tarifas.html">Tarifas y rutas</a></li>
+        <li><a href="pages/reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+
+    <p class="pie__copy">
+      <small>&copy; <time datetime="2026">2026</time> Rueda Libre</small>
+    </p>
+  </footer>
+  
+</body>
+
 </html>
