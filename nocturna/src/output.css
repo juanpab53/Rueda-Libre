@@ -738,36 +738,28 @@ video {
   border-left-width: 4px;
 }
 
-.border-amarillo-farol {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 209 102 / var(--tw-border-opacity, 1));
-}
-
 .border-azul-noche {
   --tw-border-opacity: 1;
   border-color: rgb(20 33 61 / var(--tw-border-opacity, 1));
 }
 
-.border-gris-asfalto\/30 {
-  border-color: rgb(91 100 112 / 0.3);
-}
-
-.border-gris-asfalto\/60 {
-  border-color: rgb(91 100 112 / 0.6);
-}
-
-.border-naranja-pedal {
+.border-black {
   --tw-border-opacity: 1;
-  border-color: rgb(243 154 43 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
+.border-gris-asfalto {
+  --tw-border-opacity: 1;
+  border-color: rgb(91 100 112 / var(--tw-border-opacity, 1));
+}
+
+.border-gris-asfalto\/80 {
+  border-color: rgb(91 100 112 / 0.8);
 }
 
 .border-verde-ruta {
   --tw-border-opacity: 1;
   border-color: rgb(30 122 79 / var(--tw-border-opacity, 1));
-}
-
-.border-verde-ruta\/40 {
-  border-color: rgb(30 122 79 / 0.4);
 }
 
 .bg-amarillo-farol {
@@ -1153,16 +1145,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-amarillo-farol\/50:focus {
-  --tw-ring-color: rgb(255 209 102 / 0.5);
+.focus\:ring-amarillo-farol\/60:focus {
+  --tw-ring-color: rgb(255 209 102 / 0.6);
 }
 
-.focus\:ring-azul-noche\/20:focus {
-  --tw-ring-color: rgb(20 33 61 / 0.2);
-}
-
-.focus\:ring-azul-noche\/40:focus {
-  --tw-ring-color: rgb(20 33 61 / 0.4);
+.focus\:ring-azul-noche\/60:focus {
+  --tw-ring-color: rgb(20 33 61 / 0.6);
 }
 
 .focus-visible\:ring-2:focus-visible {
@@ -1318,12 +1306,8 @@ video {
     border-color: rgb(255 209 102 / var(--tw-border-opacity, 1));
   }
 
-  .dark\:border-crema\/20 {
-    border-color: rgb(250 246 239 / 0.2);
-  }
-
-  .dark\:border-crema\/30 {
-    border-color: rgb(250 246 239 / 0.3);
+  .dark\:border-crema\/40 {
+    border-color: rgb(250 246 239 / 0.4);
   }
 
   .dark\:border-naranja-pedal {
@@ -1412,12 +1396,8 @@ video {
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   }
 
-  .dark\:ring-crema\/20 {
-    --tw-ring-color: rgb(250 246 239 / 0.2);
-  }
-
-  .dark\:ring-crema\/30 {
-    --tw-ring-color: rgb(250 246 239 / 0.3);
+  .dark\:ring-crema\/40 {
+    --tw-ring-color: rgb(250 246 239 / 0.4);
   }
 
   .dark\:hover\:border-amarillo-farol:hover {
@@ -1450,12 +1430,8 @@ video {
     border-color: rgb(255 209 102 / var(--tw-border-opacity, 1));
   }
 
-  .dark\:focus\:ring-amarillo-farol\/30:focus {
-    --tw-ring-color: rgb(255 209 102 / 0.3);
-  }
-
-  .dark\:focus\:ring-amarillo-farol\/50:focus {
-    --tw-ring-color: rgb(255 209 102 / 0.5);
+  .dark\:focus\:ring-amarillo-farol\/60:focus {
+    --tw-ring-color: rgb(255 209 102 / 0.6);
   }
 
   .dark\:focus\:ring-crema\/50:focus {
