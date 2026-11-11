@@ -701,8 +701,8 @@ video {
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
-.divide-gris-asfalto\/30 > :not([hidden]) ~ :not([hidden]) {
-  border-color: rgb(91 100 112 / 0.3);
+.divide-gris-asfalto\/80 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgb(91 100 112 / 0.8);
 }
 
 .overflow-hidden {
@@ -1297,8 +1297,8 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:divide-crema\/20 > :not([hidden]) ~ :not([hidden]) {
-    border-color: rgb(250 246 239 / 0.2);
+  .dark\:divide-crema\/40 > :not([hidden]) ~ :not([hidden]) {
+    border-color: rgb(250 246 239 / 0.4);
   }
 
   .dark\:border-amarillo-farol {
