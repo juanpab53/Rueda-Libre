@@ -5,180 +5,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rueda Nocturna | Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-slate-950">
+<body class="bg-crema font-open-sans text-azul-noche antialiased">
     <a href="#contenido"
-        class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-slate-900 focus:px-4 focus:py-2 focus:font-semibold focus:text-white">Saltar
+        class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-azul-noche focus:px-4 focus:py-2 focus:font-semibold focus:text-crema">Saltar
         al contenido</a>
 
     <header
-        class="flex flex-col items-center gap-4 border-b border-slate-700 p-4 sm:p-6 md:flex-row md:justify-between">
-        <a href="./index.html" class="text-xl font-bold tracking-tight text-white">
-            Rueda <span class="text-amber-400">Libre</span>
+        class="flex flex-col items-center gap-4 border-b border-gris-asfalto/30 p-4 sm:p-6 md:flex-row md:justify-between">
+        <a href="./index.html"
+            class="font-montserrat text-xl font-bold tracking-tight text-azul-noche">
+            Rueda <span class="text-verde-ruta">Libre</span>
         </a>
 
         <nav aria-label="Principal" class="hidden items-center gap-6 md:flex">
             <a href="#rutas"
-                class="rounded px-1 py-1 text-sm font-semibold text-slate-300 hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">Rutas</a>
+                class="rounded px-1 py-1 text-sm font-semibold text-gris-asfalto hover:text-azul-noche hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azul-noche">Rutas</a>
             <a href="#info"
-                class="rounded px-1 py-1 text-sm font-semibold text-slate-300 hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">Cómo
+                class="rounded px-1 py-1 text-sm font-semibold text-gris-asfalto hover:text-azul-noche hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azul-noche">Cómo
                 funciona</a>
             <a href="#inscripcion"
-                class="rounded px-1 py-1 text-sm font-semibold text-slate-300 hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">Inscripción</a>
+                class="rounded px-1 py-1 text-sm font-semibold text-gris-asfalto hover:text-azul-noche hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azul-noche">Inscripción</a>
         </nav>
 
         <a href="#inscripcion"
-            class="inline-block w-full rounded-lg bg-amber-400 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-slate-950 shadow-md transition-colors hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200 md:w-auto">Inscríbete</a>
+            class="inline-block w-full rounded-lg bg-amarillo-farol px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche shadow-md transition-colors hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche/40 md:w-auto">Inscríbete</a>
     </header>
 
     <main id="contenido"
         class="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 p-4 sm:gap-12 sm:p-6 lg:p-8">
-        <section class="w-full max-w-3xl space-y-6 rounded-lg border border-slate-700 bg-slate-900 p-6 sm:p-10 lg:p-12">
-            <p class="text-xs font-semibold uppercase tracking-widest text-amber-400">Nuevo · Jueves a sábado</p>
-            <h1 class="text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">Rueda
-                Nocturna</h1>
-            <p class="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg lg:text-xl">Descubre Medellín en bici
-                cuando se encienden las luces</p>
+        <section
+            class="w-full max-w-3xl space-y-6 rounded-lg border border-gris-asfalto/30 bg-white p-6 sm:p-10 lg:p-12">
+            <p class="text-xs font-semibold uppercase tracking-widest text-verde-ruta">Nuevo ·
+                Jueves a sábado</p>
+            <h1
+                class="font-montserrat text-3xl font-bold leading-tight tracking-tight text-azul-noche sm:text-5xl lg:text-6xl">
+                Rueda Nocturna</h1>
+            <p class="max-w-xl text-base leading-relaxed text-gris-asfalto sm:text-lg lg:text-xl">
+                Descubre Medellín en bici cuando se encienden las luces</p>
             <div class="flex flex-wrap items-center gap-4 sm:gap-8">
-                <p class="text-xl font-bold text-white sm:text-2xl">3 rutas</p>
-                <p class="text-xl font-bold text-amber-400 sm:text-2xl">Desde $55.000</p>
+                <p class="text-xl font-bold text-azul-noche sm:text-2xl">3 rutas</p>
+                <p class="text-xl font-bold text-verde-ruta sm:text-2xl">Desde $55.000</p>
             </div>
 
             <!-- Botones -->
             <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <!-- Principal -->
                 <a href="#inscripcion"
-                    class="inline-block w-full rounded-lg bg-amber-400 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-slate-950 shadow-md transition-colors hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200 sm:w-auto sm:px-8 sm:py-4">
+                    class="inline-block w-full rounded-lg bg-amarillo-farol px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche shadow-md transition-colors hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche/40 sm:w-auto sm:px-8 sm:py-4">
                     Inscríbete
                 </a>
 
                 <!-- Secundario -->
                 <a href="#rutas"
-                    class="inline-block w-full rounded-lg bg-slate-700 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-white shadow transition-colors hover:bg-slate-600 focus:outline-none focus:ring-4 focus:ring-slate-400 sm:w-auto sm:px-8 sm:py-4">
+                    class="inline-block w-full rounded-lg bg-azul-noche px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-crema shadow transition-colors hover:bg-verde-ruta focus:outline-none focus:ring-4 focus:ring-azul-noche/40 sm:w-auto sm:px-8 sm:py-4">
                     Ver rutas
                 </a>
 
                 <!-- Contorno -->
                 <a href="#info"
-                    class="inline-block w-full rounded-lg border-2 border-amber-400 bg-transparent px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-amber-400 transition-colors hover:bg-amber-400 hover:text-slate-950 focus:outline-none focus:ring-4 focus:ring-amber-200 sm:w-auto sm:px-8 sm:py-4">
+                    class="inline-block w-full rounded-lg border-2 border-azul-noche bg-transparent px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche transition-colors hover:bg-azul-noche hover:text-crema focus:outline-none focus:ring-4 focus:ring-azul-noche/40 sm:w-auto sm:px-8 sm:py-4">
                     Más información
                 </a>
             </div>
         </section>
 
         <section id="rutas" class="w-full space-y-6">
-            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">Rutas</h2>
+            <h2
+                class="font-montserrat text-2xl font-bold tracking-tight text-azul-noche sm:text-3xl lg:text-4xl">
+                Rutas</h2>
 
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-700 bg-slate-900 shadow-lg transition-shadow duration-300 hover:border-amber-400 hover:shadow-2xl">
+                    class="overflow-hidden rounded-lg border border-gris-asfalto/30 bg-white shadow-lg transition-shadow duration-300 hover:border-verde-ruta hover:shadow-2xl">
                     <img src="../img/neighborhood.png" alt="Ciclistas recorriendo el centro de Medellín de noche"
                         class="h-48 w-full object-cover sm:h-56">
                     <div class="space-y-4 p-4 sm:p-6">
                         <span
-                            class="inline-block rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-300">Nivel
+                            class="inline-block rounded-lg border border-verde-ruta/40 bg-verde-ruta/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-verde-ruta">Nivel
                             fácil</span>
-                        <h3 class="text-xl font-bold text-white sm:text-2xl">Luces del Centro</h3>
+                        <h3 class="font-montserrat text-xl font-bold text-azul-noche sm:text-2xl">Luces
+                            del Centro</h3>
 
-                        <dl class="divide-y divide-slate-800 border-y border-slate-800">
+                        <dl
+                            class="divide-y divide-gris-asfalto/30 border-y border-gris-asfalto/30">
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Distancia</dt>
-                                <dd class="text-right text-sm font-semibold text-white">10 km</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Distancia</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">10 km</dd>
                             </div>
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Duración</dt>
-                                <dd class="text-right text-sm font-semibold text-white">2 h</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Duración</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">2 h</dd>
                             </div>
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Punto de
-                                    encuentro</dt>
-                                <dd class="text-right text-sm font-semibold text-white">Sede Rueda Libre</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Punto de encuentro</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">Sede Rueda
+                                    Libre</dd>
                             </div>
                         </dl>
 
                         <div class="flex flex-wrap items-center justify-between gap-4">
                             <div>
-                                <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Precio</p>
-                                <p class="text-2xl font-bold text-amber-400">$55.000</p>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Precio</p>
+                                <p class="text-2xl font-bold text-verde-ruta">$55.000</p>
                             </div>
                             <a href="#inscripcion"
-                                class="inline-block rounded-lg bg-amber-400 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-slate-950 shadow-md transition-colors hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200">Reservar</a>
+                                class="inline-block rounded-lg bg-amarillo-farol px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche shadow-md transition-colors hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche/40">Reservar</a>
                         </div>
                     </div>
                 </article>
 
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-700 bg-slate-900 shadow-lg transition-shadow duration-300 hover:border-amber-400 hover:shadow-2xl">
+                    class="overflow-hidden rounded-lg border border-gris-asfalto/30 bg-white shadow-lg transition-shadow duration-300 hover:border-verde-ruta hover:shadow-2xl">
                     <img src="../img/route.jpg" alt="Grupo de ciclistas en un mirador de Medellín"
                         class="h-48 w-full object-cover sm:h-56">
                     <div class="space-y-4 p-4 sm:p-6">
                         <span
-                            class="inline-block rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-300">Nivel
+                            class="inline-block rounded-lg border border-amarillo-farol bg-amarillo-farol/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-azul-noche">Nivel
                             medio</span>
-                        <h3 class="text-xl font-bold text-white sm:text-2xl">Miradores de la Ciudad</h3>
+                        <h3 class="font-montserrat text-xl font-bold text-azul-noche sm:text-2xl">
+                            Miradores de la Ciudad</h3>
 
-                        <dl class="divide-y divide-slate-800 border-y border-slate-800">
+                        <dl
+                            class="divide-y divide-gris-asfalto/30 border-y border-gris-asfalto/30">
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Distancia</dt>
-                                <dd class="text-right text-sm font-semibold text-white">16 km</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Distancia</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">16 km</dd>
                             </div>
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Duración</dt>
-                                <dd class="text-right text-sm font-semibold text-white">3 h</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Duración</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">3 h</dd>
                             </div>
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Punto de
-                                    encuentro</dt>
-                                <dd class="text-right text-sm font-semibold text-white">Sede Rueda Libre</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Punto de encuentro</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">Sede Rueda
+                                    Libre</dd>
                             </div>
                         </dl>
 
                         <div class="flex flex-wrap items-center justify-between gap-4">
                             <div>
-                                <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Precio</p>
-                                <p class="text-2xl font-bold text-amber-400">$75.000</p>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Precio</p>
+                                <p class="text-2xl font-bold text-verde-ruta">$75.000</p>
                             </div>
                             <a href="#inscripcion"
-                                class="inline-block rounded-lg bg-amber-400 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-slate-950 shadow-md transition-colors hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200">Reservar</a>
+                                class="inline-block rounded-lg bg-amarillo-farol px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche shadow-md transition-colors hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche/40">Reservar</a>
                         </div>
                     </div>
                 </article>
 
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-700 bg-slate-900 shadow-lg transition-shadow duration-300 hover:border-amber-400 hover:shadow-2xl">
+                    class="overflow-hidden rounded-lg border border-gris-asfalto/30 bg-white shadow-lg transition-shadow duration-300 hover:border-verde-ruta hover:shadow-2xl">
                     <img src="../img/palmas.png" alt="Ciclistas subiendo a Las Palmas bajo la luna"
                         class="h-48 w-full object-cover sm:h-56">
                     <div class="space-y-4 p-4 sm:p-6">
                         <span
-                            class="inline-block rounded-lg border border-rose-500/40 bg-rose-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-rose-300">Nivel
+                            class="inline-block rounded-lg border border-naranja-pedal bg-naranja-pedal/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-azul-noche">Nivel
                             difícil</span>
-                        <h3 class="text-xl font-bold text-white sm:text-2xl">Luna en Las Palmas</h3>
+                        <h3 class="font-montserrat text-xl font-bold text-azul-noche sm:text-2xl">Luna
+                            en Las Palmas</h3>
 
-                        <dl class="divide-y divide-slate-800 border-y border-slate-800">
+                        <dl
+                            class="divide-y divide-gris-asfalto/30 border-y border-gris-asfalto/30">
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Distancia</dt>
-                                <dd class="text-right text-sm font-semibold text-white">22 km</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Distancia</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">22 km</dd>
                             </div>
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Duración</dt>
-                                <dd class="text-right text-sm font-semibold text-white">3,5 h</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Duración</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">3,5 h</dd>
                             </div>
                             <div class="flex items-center justify-between gap-3 py-2">
-                                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Punto de
-                                    encuentro</dt>
-                                <dd class="text-right text-sm font-semibold text-white">Sede Rueda Libre</dd>
+                                <dt class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Punto de encuentro</dt>
+                                <dd class="text-right text-sm font-semibold text-azul-noche">Sede Rueda
+                                    Libre</dd>
                             </div>
                         </dl>
 
                         <div class="flex flex-wrap items-center justify-between gap-4">
                             <div>
-                                <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Precio</p>
-                                <p class="text-2xl font-bold text-amber-400">$95.000</p>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-gris-asfalto">
+                                    Precio</p>
+                                <p class="text-2xl font-bold text-verde-ruta">$95.000</p>
                             </div>
                             <a href="#inscripcion"
-                                class="inline-block rounded-lg bg-amber-400 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-slate-950 shadow-md transition-colors hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200">Reservar</a>
+                                class="inline-block rounded-lg bg-amarillo-farol px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche shadow-md transition-colors hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-azul-noche/40">Reservar</a>
                         </div>
                     </div>
                 </article>
@@ -186,49 +215,57 @@
         </section>
 
         <section id="info" class="w-full space-y-6">
-            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">¿Cómo funciona?</h2>
+            <h2
+                class="font-montserrat text-2xl font-bold tracking-tight text-azul-noche sm:text-3xl lg:text-4xl">
+                ¿Cómo funciona?</h2>
 
             <ol class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-                <li class="space-y-2 rounded-lg border border-slate-700 bg-slate-900 p-4 sm:p-6">
+                <li
+                    class="space-y-2 rounded-lg border border-gris-asfalto/30 bg-white p-4 sm:p-6">
                     <span
-                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500 text-sm font-bold text-slate-950">1</span>
-                    <h3 class="text-lg font-bold text-white">Elige tu ruta</h3>
-                    <p class="text-sm leading-relaxed text-slate-300">Consulta las tres rutas disponibles y elige la que
-                        mejor se adapte a tu nivel.</p>
+                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-verde-ruta font-montserrat text-sm font-bold text-crema">1</span>
+                    <h3 class="font-montserrat text-lg font-bold text-azul-noche">Elige tu ruta</h3>
+                    <p class="text-sm leading-relaxed text-gris-asfalto">Consulta las tres rutas
+                        disponibles y elige la que mejor se adapte a tu nivel.</p>
                 </li>
 
-                <li class="space-y-2 rounded-lg border border-slate-700 bg-slate-900 p-4 sm:p-6">
+                <li
+                    class="space-y-2 rounded-lg border border-gris-asfalto/30 bg-white p-4 sm:p-6">
                     <span
-                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-400 text-sm font-bold text-slate-950">2</span>
-                    <h3 class="text-lg font-bold text-white">Reserva tu cupo</h3>
-                    <p class="text-sm leading-relaxed text-slate-300">Selecciona la fecha y completa tus datos en el
-                        formulario de reserva.</p>
+                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-amarillo-farol font-montserrat text-sm font-bold text-azul-noche">2</span>
+                    <h3 class="font-montserrat text-lg font-bold text-azul-noche">Reserva tu cupo</h3>
+                    <p class="text-sm leading-relaxed text-gris-asfalto">Selecciona la fecha y
+                        completa tus datos en el formulario de reserva.</p>
                 </li>
 
-                <li class="space-y-2 rounded-lg border border-slate-700 bg-slate-900 p-4 sm:p-6">
+                <li
+                    class="space-y-2 rounded-lg border border-gris-asfalto/30 bg-white p-4 sm:p-6">
                     <span
-                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-500 text-sm font-bold text-white">3</span>
-                    <h3 class="text-lg font-bold text-white">Llega 15 minutos antes</h3>
-                    <p class="text-sm leading-relaxed text-slate-300">Revisa que las luces de tu bicicleta funcionen y
-                        recoge tu equipamiento.</p>
+                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-naranja-pedal font-montserrat text-sm font-bold text-azul-noche">3</span>
+                    <h3 class="font-montserrat text-lg font-bold text-azul-noche">Llega 15 minutos antes
+                    </h3>
+                    <p class="text-sm leading-relaxed text-gris-asfalto">Revisa que las luces de tu
+                        bicicleta funcionen y recoge tu equipamiento.</p>
                 </li>
 
-                <li class="space-y-2 rounded-lg border border-slate-700 bg-slate-900 p-4 sm:p-6">
+                <li
+                    class="space-y-2 rounded-lg border border-gris-asfalto/30 bg-white p-4 sm:p-6">
                     <span
-                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-700 text-sm font-bold text-white">4</span>
-                    <h3 class="text-lg font-bold text-white">Pedalea y disfruta</h3>
-                    <p class="text-sm leading-relaxed text-slate-300">Recorre Medellín de noche con guía, casco y luces
-                        LED incluidas.</p>
+                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-azul-noche font-montserrat text-sm font-bold text-crema">4</span>
+                    <h3 class="font-montserrat text-lg font-bold text-azul-noche">Pedalea y disfruta</h3>
+                    <p class="text-sm leading-relaxed text-gris-asfalto">Recorre Medellín de noche
+                        con guía, casco y luces LED incluidas.</p>
                 </li>
             </ol>
         </section>
 
-        <section id="inscripcion" class="w-full max-w-3xl space-y-4 rounded-lg bg-slate-900 p-6 text-white sm:p-10 lg:p-12">
-            <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Inscríbete</h2>
-            <p class="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">Asegura tu cupo para la próxima
+        <section id="inscripcion"
+            class="w-full max-w-3xl space-y-4 rounded-lg bg-azul-noche p-6 text-crema sm:p-10 lg:p-12">
+            <h2 class="font-montserrat text-2xl font-bold tracking-tight sm:text-3xl">Inscríbete</h2>
+            <p class="max-w-xl text-sm leading-relaxed text-crema/80 sm:text-base">Asegura tu cupo para la próxima
                 salida. Las rutas incluyen bicicleta, casco, luces LED, chaleco reflectivo y guía.</p>
             <a href="../pages/reservas.html"
-                class="inline-block w-full rounded-lg bg-amber-400 px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-slate-950 shadow-md transition-colors hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200 sm:w-auto sm:px-8 sm:py-4">Reservar
+                class="inline-block w-full rounded-lg bg-amarillo-farol px-6 py-3 text-center text-sm font-bold uppercase tracking-widest text-azul-noche shadow-md transition-colors hover:bg-naranja-pedal focus:outline-none focus:ring-4 focus:ring-amarillo-farol/50 sm:w-auto sm:px-8 sm:py-4">Reservar
                 mi cupo</a>
         </section>
     </main>
