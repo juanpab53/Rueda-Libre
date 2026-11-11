@@ -394,15 +394,14 @@ PROTOTIPO DE LA SECCIÓN PRINCIPAL CON TAILWIND (PLAY CDN)
 
     Botón "Inscríbete" en la semana 2 (Bootstrap):
         Se construyó con un enlace que usa clases de componente ya resueltas:
-            <a class="btn btn-warning mt-auto" href="../pages/reservas.html">Reservar</a>
+            <a class="mt-auto btn btn-warning" href="../pages/reservas.html">Reservar</a>
         La clase btn aporta relleno, tamaño de letra, alineación y estados; btn-warning impone el color
         amarillo del framework. Para acercarlo a la identidad de la marca había que sobrescribir estilos
         con CSS propio. Fue rápido porque el botón ya venía diseñado.
 
     Botón "Inscríbete" hoy (Tailwind):
         Se construyó combinando utilidades sobre el mismo tipo de enlace, sin una clase "botón":
-            <a href="#inscripcion" class="inline-block w-full max-w-xs bg-amber-400 px-8 py-4
-            text-center text-sm font-bold uppercase tracking-widest text-slate-950 hover:bg-amber-300">
+            <a href="#inscripcion" class="inline-block w-full max-w-xs px-8 py-4 text-sm font-bold tracking-widest text-center uppercase bg-amber-400 text-slate-950 hover:bg-amber-300">
             Inscríbete</a>
         inline-block y text-center definen la forma; w-full y max-w-xs el ancho; px-8 y py-4 el relleno;
         bg-amber-400 y text-slate-950 los colores; y text-sm, font-bold, uppercase y tracking-widest la
@@ -499,3 +498,224 @@ REGLAS DEL KIT DE COMPONENTES
         https://juanpab53.github.io/Ruta-Basica/rueda-libre/nocturna/componentes.html
         La página queda disponible cuando el commit llega a main y se ejecuta el workflow de Pages.
  
+ LANDING RESPONSIVE CON TAILWIND
+    Archivos: nocturna/index.html, nocturna/src/output.css
+    Nota de alcance: esta tarea documenta la landing de Nocturna construida con Tailwind.
+    La sección "MOBILE-FIRST" anterior corresponde al sitio principal con CSS propio y se
+    conserva como historial; no describe esta landing.
+
+    Contexto:
+        La landing debía funcionar primero en celular y ampliarse con breakpoints de Tailwind.
+        Se trabajó con Tailwind CSS 3.4.19 y clases mobile-first; no se agregó CSS propio para
+        el layout responsive.
+
+    Problemas detectados a 360 px y soluciones:
+        1. El contenedor de rutas usaba flex flex-row space-x-8 y las tarjetas se comprimían.
+           Solución: se reemplazó por un grid de una columna en móvil.
+        2. Los botones principales y secundarios podían desbordar el ancho disponible.
+           Solución: w-full en móvil y sm:w-auto desde 640 px.
+        3. Las estadísticas "3 rutas" y "Desde $55.000" usaban space-x-8 y podían desbordar.
+           Solución: flex flex-wrap items-center gap-4 sm:gap-8.
+        4. El relleno general era demasiado grande para 360 px.
+           Solución: p-4 en móvil, sm:p-6 y lg:p-8; tarjetas con p-4 sm:p-6.
+        5. Los títulos no escalaban y podían ocupar varias líneas innecesarias.
+           Solución: text-3xl sm:text-5xl lg:text-6xl para el h1 y escalas equivalentes
+           para los h2.
+        6. Las filas de detalle de cada ruta quedaban muy ajustadas.
+           Solución: flex items-center justify-between gap-3, texto a la derecha y
+           separadores con divide-y.
+        7. La navegación no cabía en móvil.
+           Solución: nav oculto con hidden y visible desde md con md:flex; el CTA
+           "Inscríbete" permanece visible siempre.
+
+    Enfoque mobile-first:
+        Los estilos base describen una sola columna y el diseño móvil. Los breakpoints
+        amplían el layout:
+            - sm (640 px): aparecen dos columnas en rutas y pasos, y los botones pasan
+              de ancho completo a ancho automático.
+            - md (768 px): el encabezado pasa de columna a fila y aparece la navegación.
+            - lg (1024 px): rutas en tres columnas y pasos en cuatro columnas.
+        No se usaron breakpoints personalizados; se aprovecharon los de Tailwind.
+
+    Clases responsive principales:
+        Rutas:
+            grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3
+        Pasos:
+            grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4
+        Encabezado:
+            flex flex-col items-center gap-4 p-4 sm:p-6 md:flex-row md:justify-between
+        Navegación:
+            hidden items-center gap-6 md:flex
+        Contenedor principal:
+            mx-auto flex w-full max-w-5xl flex-col items-center gap-8 p-4 sm:gap-12 sm:p-6 lg:p-8
+        Botones:
+            w-full ... sm:w-auto; en escritorio conservan px-8 py-4.
+
+    Secciones y navegación:
+        Se añadió un encabezado con enlace al inicio, navegación principal y CTA.
+        Se añadieron las secciones:
+            - #rutas: tres tarjetas de rutas con imagen, nivel, distancia, duración,
+              punto de encuentro, precio y botón "Reservar".
+            - #info: sección "¿Cómo funciona?" con cuatro pasos.
+            - #inscripcion: bloque final con CTA "Reservar mi cupo" que enlaza a
+              ../pages/reservas.html.
+        Los enlaces #rutas, #info e #inscripcion ahora tienen destino real dentro de la página.
+        El CTA "Inscríbete" del encabezado y de la portada apunta a #inscripcion.
+
+    Tipografía y espaciado responsive:
+        El h1 usa text-3xl sm:text-5xl lg:text-6xl; los h2 usan text-2xl sm:text-3xl lg:text-4xl.
+        El texto de apoyo usa text-base sm:text-lg lg:text-xl.
+        Las tarjetas y secciones ajustan relleno y separación con p-4, p-6, sm:p-10 y lg:p-12.
+        Las imágenes de las tarjetas usan h-48 sm:h-56 y object-cover para no deformarse.
+
+    Pruebas responsive:
+        Las siguientes comprobaciones se hicieron con las clases y la compilación, pero
+        las pruebas visuales en DevTools quedaron pendientes al momento de redactar.
+        Completar la columna "Resultado" después de probar en el navegador.
+
+        Viewport   Rutas        Pasos        Encabezado   Scroll horizontal   CTA Inscríbete   Resultado
+        360 px     1 columna    1 columna    Apilado      Pendiente           Visible          Pendiente
+        768 px     2 columnas   2 columnas   En fila      Pendiente           Visible          Pendiente
+        1024 px    3 columnas   4 columnas   En fila      Pendiente           Visible          Pendiente
+        1280 px    3 columnas   4 columnas   En fila      Pendiente           Visible          Pendiente
+
+    Limitaciones:
+        - No se ejecutaron pruebas visuales reales en 360, 768, 1024 y 1280 px.
+        - No se verificó el scroll horizontal en dispositivos físicos.
+        - La compilación de Tailwind y la presencia de las clases sí se verificaron.
+        - El repositorio no tiene una suite de pruebas automatizada.
+
+
+TEMA DE MARCA Y MODO OSCURO
+    Base técnica:
+        Se conservó Tailwind CSS 3.4.19. No se migró a Tailwind 4.
+        No se usaron @theme, @custom-variant ni la sintaxis de configuración de v4.
+        src/input.css mantiene las directivas de v3:
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+        La configuración se hizo en tailwind.config.js con theme.extend.
+
+    Paleta de marca:
+        Los cinco colores originales se tomaron de css/styles.css (variables --color-*).
+        Amarillo Farol es el color nuevo solicitado para la identidad de la landing.
+
+        Token Tailwind      HEX         Uso principal
+        verde-ruta          #1e7a4f     Precios, etiquetas de nivel fácil, acentos
+        naranja-pedal       #f39a2b     Hover del CTA, nivel difícil
+        azul-noche          #14213d     Texto principal, fondos oscuros, botón secundario
+        crema               #faf6ef     Fondo claro, texto sobre fondos oscuros
+        gris-asfalto        #5b6470     Texto secundario, bordes
+        amarillo-farol      #FFD166     CTA principal, acentos y modo oscuro
+
+    Tipografías:
+        Montserrat para títulos, pesos 600 y 700.
+        Open Sans para texto general, pesos 400, 600 y 700.
+        Se cargan desde Google Fonts en index.html y componentes.html.
+        En tailwind.config.js se registraron como:
+            font-montserrat: Montserrat, ui-sans-serif, system-ui, sans-serif
+            font-open-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif
+        El body usa font-open-sans y los títulos usan font-montserrat.
+
+    Configuración de tailwind.config.js:
+        darkMode: 'media'
+        content: ['./index.html', './componentes.html']
+        theme.extend.colors: los seis colores de marca.
+        theme.extend.fontFamily: montserrat y open-sans.
+        No se agregaron plugins.
+
+    Reemplazo de colores genéricos:
+        En la landing y en el kit se reemplazaron las combinaciones de slate, amber,
+        emerald, rose y sky por la paleta de marca.
+        En el código actual de nocturna/ no quedan clases de color genéricas de Tailwind
+        para fondos, textos o bordes; las utilidades de marca son las que generan output.css.
+        Los estados de alerta se resolvieron con la misma paleta:
+            - Información: borde azul-noche y fondo azul-noche/5.
+            - Éxito: borde verde-ruta y fondo verde-ruta/5.
+            - Advertencia: borde negro y fondo amarillo-farol/20.
+        En modo oscuro, la advertencia cambia a borde amarillo-farol y fondo amarillo-farol/15.
+
+    Modo oscuro:
+        Se activó con darkMode: 'media'. El tema cambia automáticamente según la
+        preferencia del sistema operativo; no se agregó un selector manual ni JavaScript.
+        Adaptaciones principales:
+            - Fondo general: bg-crema en claro y dark:bg-azul-noche en oscuro.
+            - Texto principal: text-azul-noche en claro y dark:text-crema en oscuro.
+            - Texto secundario: text-gris-asfalto en claro y dark:text-crema/80 o
+              dark:text-crema/70 en oscuro.
+            - Tarjetas: bg-white en claro y dark:bg-white/5 en oscuro.
+            - Bordes: border-gris-asfalto/80 en claro y dark:border-crema/40 en oscuro.
+            - Separadores: divide-gris-asfalto/80 y border-gris-asfalto/80 en claro;
+              dark:divide-crema/40 y dark:border-crema/40 en oscuro.
+            - Inputs: bg-white y border-gris-asfalto en claro; dark:bg-black/20 y
+              dark:border-crema/40 en oscuro.
+            - CTA principal: bg-amarillo-farol con texto azul-noche en ambos temas.
+            - Botón secundario: bg-azul-noche con texto crema en claro; dark:bg-crema
+              con texto azul-noche en oscuro.
+            - Botón de contorno: borde azul-noche en claro; dark:border-amarillo-farol
+              en oscuro.
+            - Foco: ring azul-noche/60 en claro; ring amarillo-farol/60 o crema/50 en oscuro.
+        No se perdió información ni funcionalidad al cambiar de tema: los textos,
+        botones, enlaces, alertas y campos siguen siendo visibles y utilizables.
+
+    Validación de contraste WCAG:
+        Se midieron las combinaciones reales de la paleta. Todas las combinaciones
+        usadas para texto normal cumplen al menos 4.5:1; los bordes, focos y controles
+        usados como interfaz cumplen al menos 3:1.
+
+        Modo claro:
+            Combinación                                      Relación    Uso
+            Azul Noche #14213d / Crema #faf6ef               14.83:1     Texto normal
+            Gris Asfalto #5b6470 / Crema                     5.57:1      Texto secundario
+            Verde Ruta #1e7a4f / blanco                      5.31:1      Precio, etiqueta
+            Verde Ruta / Crema                               4.93:1      Texto normal
+            Azul Noche / Amarillo Farol #FFD166              11.08:1     CTA principal
+            Azul Noche / Naranja Pedal #f39a2b               7.20:1      Hover del CTA
+            Crema / Azul Noche                               14.83:1     Botón secundario
+            Crema / Verde Ruta                               4.93:1      Hover secundario
+            Borde tarjeta Gris Asfalto/80 / blanco           3.83:1      Interfaz
+            Borde input Gris Asfalto / blanco                6.00:1      Interfaz
+            Anillo foco Azul Noche/60 / Crema                4.23:1      Interfaz
+            Borde alerta advertencia negro / Crema           19.49:1     Interfaz
+
+        Modo oscuro:
+            Combinación                                      Relación    Uso
+            Crema / Azul Noche                               14.83:1     Texto normal
+            Crema/80 / Azul Noche                            9.87:1      Texto secundario
+            Crema/70 / Azul Noche                            7.88:1      Etiquetas
+            Amarillo Farol / Azul Noche                      11.08:1     Precio, eyebrow
+            Amarillo Farol / tarjeta white/5                 9.63:1      Texto sobre tarjeta
+            Crema / Verde Ruta/20                            12.31:1     Nivel fácil
+            Amarillo Farol / Amarillo/15                     7.79:1      Nivel medio
+            Crema / Naranja/20                               10.43:1     Nivel difícil
+            Placeholder Crema/60 / input                     6.45:1      Texto de ayuda
+            Borde tarjeta Crema/40 / Azul Noche              3.51:1      Interfaz
+            Borde input Crema/40 / Azul Noche                3.51:1      Interfaz
+            Anillo foco Amarillo/60 / Azul Noche             4.82:1      Interfaz
+            Anillo foco Crema/50 / Azul Noche                4.73:1      Interfaz
+            Borde fácil Verde Ruta / Azul Noche              3.01:1      Interfaz
+            Borde éxito Verde Ruta / Azul Noche              3.01:1      Interfaz
+
+        Combinaciones que no se usan para texto normal:
+            Naranja Pedal / Crema                            2.06:1      No cumple
+            Naranja Pedal / blanco                           2.22:1      No cumple
+            Amarillo Farol / blanco                          1.44:1      No cumple
+            Verde Ruta / Azul Noche                          3.01:1      Solo texto grande o interfaz
+            Gris Asfalto / Azul Noche                        2.66:1      No cumple; se usa Crema/70 o superior
+
+        Conclusión: Verde Ruta sobre Azul Noche no se usa para texto normal. Se reserva
+        para texto grande, bordes o controles; para texto normal sobre Azul Noche se usa
+        Crema o Amarillo Farol.
+
+    Pruebas de modo claro y oscuro:
+        Completar con el resultado de DevTools (Rendering > Emulate CSS media feature
+        prefers-color-scheme) y de una prueba con el tema del sistema.
+
+        Verificación                                   Claro       Oscuro      Resultado
+        Fondos generales y de secciones                Pendiente   Pendiente   Pendiente
+        Títulos y textos secundarios legibles          Pendiente   Pendiente   Pendiente
+        Tarjetas y bordes perceptibles                 Pendiente   Pendiente   Pendiente
+        Campos de formulario con contraste             Pendiente   Pendiente   Pendiente
+        Botones y estados hover/focus                  Pendiente   Pendiente   Pendiente
+        Alertas y etiquetas de nivel                   Pendiente   Pendiente   Pendiente
+        Sin información ni funcionalidad perdida       Pendiente   Pendiente   Pendiente
