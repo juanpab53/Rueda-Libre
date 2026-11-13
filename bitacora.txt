@@ -750,3 +750,17 @@ Implementación conexión entre paginas:
         - En nocturna/index.html se agregó un botón hacia ../pages/tarifas.html.
           
     Tiempo invertido: aproximadamente 20 minutos de trabajo.
+
+Implementación de sección de planes Rueda Nocturna:
+
+    Implementación:
+        - Se agregó la sección #planes entre #info y #inscripcion.
+        - Se crearon tres tarjetas: Individual, Pareja y Grupo.
+        - Se utilizó CSS Grid con una columna en móvil y tres desde lg.
+        - Las tarjetas utilizan Flexbox para distribuir verticalmente el contenido y mantener los botones alineados.
+        - Se destacó el plan Pareja mediante borde de 2px, fondo diferenciado y etiqueta "Más elegido".
+        - Se reservó el mismo espacio para la etiqueta en las tres tarjetas, evitando desplazamientos.
+        - Se mantuvo el padding p-6 en todas las tarjetas.
+        - Se agregaron variantes dark: para el tema oscuro.
+
+    Tiempo invertido: 45 minutos de trabajo.
