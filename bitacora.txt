@@ -719,3 +719,22 @@ TEMA DE MARCA Y MODO OSCURO
         Botones y estados hover/focus                  Pendiente   Pendiente   Pendiente
         Alertas y etiquetas de nivel                   Pendiente   Pendiente   Pendiente
         Sin información ni funcionalidad perdida       Pendiente   Pendiente   Pendiente
+
+Implementación del formulario de inscripción de Rueda Nocturna:
+
+    Sección de inscripción en nocturna/index.html:
+        - Se sustituyó el enlace genérico de reserva por un formulario integrado en la landing.
+        - Se organizaron los campos en fieldset y legend: datos personales y detalles de la salida.
+        - Se agregaron nombre completo, correo, celular, ruta, día, acompañantes, experiencia,
+          bicicleta propia y aceptación de condiciones.
+        - Los campos obligatorios usan required; nombre usa minlength=3; celular usa
+          pattern de 10 dígitos, minlength y maxlength; acompañantes usa min=0 y max=3.
+        - Los campos cortos se distribuyen en dos columnas desde sm y pasan a una columna
+          en pantallas pequeñas. Se mantienen etiquetas asociadas y foco visible.
+
+    Verificación realizada:
+        - Revisión del HTML: todos los atributos for de label apuntan a IDs existentes.
+        - Revisión de restricciones: todos los controles del formulario son obligatorios;
+          celular limita a 10 dígitos y acompañantes a un rango de 0 a 3.
+
+    Tiempo registrado: aproximadamente 35 minutos de trabajo.

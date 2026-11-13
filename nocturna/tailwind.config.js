@@ -8,7 +8,7 @@ module.exports = {
         'verde-ruta': '#1e7a4f',
         'naranja-pedal': '#f39a2b',
         'azul-noche': '#14213d',
-        crema: '#faf6ef',
+        'crema': '#faf6ef',
         'gris-asfalto': '#5b6470',
         'amarillo-farol': '#FFD166',
       },
