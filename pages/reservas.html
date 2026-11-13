@@ -2,17 +2,17 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Reserva tu bicicleta o tour guiado en Medellín: elige el tipo de bicicleta, el plan y la fecha." />
-  <link rel="icon" href="data:," />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    content="Reserva tu bicicleta o tour guiado en Medellín: elige el tipo de bicicleta, el plan y la fecha.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css" />
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
   <title>Reservas | Rueda Libre</title>
 </head>
 
@@ -21,7 +21,7 @@
 
   <header class="encabezado">
     <a class="marca" href="../index.html">
-      <img src="../img/logo.png" alt="" width="60" height="60" />
+      <img src="../img/logo.png" alt="" width="60" height="60">
       <span class="marca-nombre">Rueda Libre</span>
     </a>
 
@@ -63,33 +63,33 @@
         </p>
         <p>Todos los campos son obligatorios, excepto los comentarios.</p>
 
-        <form action="" method="post">
+        <form method="post">
           <fieldset>
             <legend>Tus datos</legend>
 
             <div class="campo">
               <label for="nombre-usuario">Nombre completo</label>
               <input id="nombre-usuario" type="text" name="nombre" placeholder="Ej: Pepito Pérez" autocomplete="name"
-                minlength="3" required />
+                minlength="3" required>
             </div>
             <div class="fila-campos">
               <div class="campo">
                 <label for="cc-usuario">Número de documento</label>
                 <input id="cc-usuario" name="documento" type="text" inputmode="numeric" pattern="[0-9]{6,10}"
-                  autocomplete="off" aria-describedby="ayuda-documento" required />
+                  autocomplete="off" aria-describedby="ayuda-documento" required>
                 <small id="ayuda-documento" class="ayuda">Solo números, entre 6 y 10 dígitos.</small>
               </div>
               <div class="campo">
                 <label for="celular">Número de celular</label>
                 <input id="celular" name="celular" type="tel" placeholder="Ej: 3001234567" pattern="3[0-9]{9}"
-                  autocomplete="tel-national" aria-describedby="ayuda-celular" required />
+                  autocomplete="tel" aria-describedby="ayuda-celular" required>
                 <small id="ayuda-celular" class="ayuda">10 dígitos, empezando por 3.</small>
               </div>
             </div>
             <div class="campo">
               <label for="email-usuario">Correo electrónico</label>
               <input id="email-usuario" type="email" name="email" placeholder="Ej: pepito.perez@gmail.com"
-                autocomplete="email" required />
+                autocomplete="email" required>
             </div>
 
           </fieldset>
@@ -100,6 +100,7 @@
             <div class="campo">
               <label for="tipo-bicicleta">Tipo de bicicleta</label>
               <select name="tipo-bicicleta" id="tipo-bicicleta" required>
+                <option value="" selected disabled>Selecciona un tipo de bicicleta</option>
                 <option value="ciudad">Ciudad</option>
                 <option value="montana">Montaña</option>
                 <option value="electrica">Eléctrica</option>
@@ -109,13 +110,14 @@
             <div class="campo">
               <label for="cantidad-bicicletas">Cantidad de bicicletas</label>
               <input id="cantidad-bicicletas" name="cantidad-bicicletas" type="number" min="1" max="6"
-                aria-describedby="ayuda-cantidad" required />
+                aria-describedby="ayuda-cantidad" required>
               <small id="ayuda-cantidad" class="ayuda">Entre 1 y 6 bicicletas.</small>
             </div>
 
             <div class="campo">
               <label for="tipo-plan">Duración del alquiler</label>
               <select name="tipo-plan" id="tipo-plan" required>
+                <option value="" selected disabled>Selecciona una duración</option>
                 <option value="hora">1 hora</option>
                 <option value="medio-dia">Medio día (4 horas)</option>
                 <option value="dia">Día completo</option>
@@ -134,7 +136,7 @@
 
             <div class="campo">
               <label for="fecha">Fecha de tu reserva</label>
-              <input id="fecha" name="fecha" type="date" min="2026-11-01" max="2026-12-31" required />
+              <input id="fecha" name="fecha" type="date" min="2026-11-01" max="2026-12-31" required>
             </div>
           </fieldset>
 
@@ -146,7 +148,7 @@
           </div>
 
           <div class="campo-checkbox">
-            <input type="checkbox" name="politicas-alquiler" id="politicas-alquiler" required />
+            <input type="checkbox" name="politicas-alquiler" id="politicas-alquiler" required>
             <label for="politicas-alquiler">
               Acepto las políticas de alquiler
             </label>
