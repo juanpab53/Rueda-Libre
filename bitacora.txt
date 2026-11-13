@@ -738,3 +738,15 @@ Implementación del formulario de inscripción de Rueda Nocturna:
           celular limita a 10 dígitos y acompañantes a un rango de 0 a 3.
 
     Tiempo registrado: aproximadamente 35 minutos de trabajo.
+
+Implementación conexión entre paginas:
+
+    Cambios realizados:
+        - En index.html, pages/tarifas.html y pages/reservas.html se agregó "Rueda Nocturna"
+          al menú principal y al pie.
+            * index.html: nocturna/index.html
+            * pages/*.html: ../nocturna/index.html
+        - En nocturna/index.html el logo pasó de ./index.html a ../index.html.
+        - En nocturna/index.html se agregó un botón hacia ../pages/tarifas.html.
+          
+    Tiempo invertido: aproximadamente 20 minutos de trabajo.
