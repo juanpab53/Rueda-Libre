@@ -1,262 +1,195 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Reserva tu bicicleta o tour guiado en Medellín: elige el tipo de bicicleta, el plan y la fecha."
-    />
-    <link rel="icon" href="data:," />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>Reservas | Rueda Libre</title>
-  </head>
 
-  <body>
-    <a class="saltar" href="#contenido">Saltar al contenido</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Reserva tu bicicleta o tour guiado en Medellín: elige el tipo de bicicleta, el plan y la fecha.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Reservas | Rueda Libre</title>
+</head>
 
-    <header class="encabezado">
-      <a class="marca" href="../index.html">
-        <img src="../img/logo.png" alt="" width="60" height="60" />
-        <span class="marca-nombre">Rueda Libre</span>
-      </a>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-      <nav class="menu" aria-label="Principal">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="tarifas.html">Tarifas y rutas</a></li>
-          <li>
-            <a href="reservas.html" class="activo" aria-current="page"
-              >Reservas</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header class="encabezado">
+    <a class="marca" href="../index.html">
+      <img src="../img/logo.png" alt="" width="60" height="60">
+      <span class="marca-nombre">Rueda Libre</span>
+    </a>
 
-    <main id="contenido" class="con-aside">
-      <div class="contenido-reservas">
-        <h1>Reservas</h1>
+    <nav class="menu" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="tarifas.html">Tarifas y rutas</a></li>
+        <li>
+          <a href="reservas.html" class="activo" aria-current="page">Reservas</a>
+        </li>
+        <li><a href="../nocturna/index.html">Rueda Nocturna</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="horarios-atencion">
-          <h2>Horarios de atención</h2>
-          <dl>
-            <dt>Lunes a viernes</dt>
-            <dd>7:00 a. m. a 7:00 p. m.</dd>
-            <dt>Sábados, domingos y festivos</dt>
-            <dd>6:00 a. m. a 2:00 p. m.</dd>
-          </dl>
-        </section>
+  <main id="contenido" class="con-aside">
+    <div class="contenido-reservas">
+      <h1>Reservas</h1>
 
-        <section id="formulario-reserva">
-          <h2>¿Quieres reservar?</h2>
-          <p>
-            Para reservar con nosotros, llena el siguiente formulario con los
-            detalles de tu reserva. ¡Te esperamos!
-          </p>
-          <p>
-            Antes de empezar, puedes consultar nuestras
-            <a href="tarifas.html">tarifas y rutas</a>.
-          </p>
-          <p>Todos los campos son obligatorios, excepto los comentarios.</p>
+      <section id="horarios-atencion">
+        <h2>Horarios de atención</h2>
+        <dl>
+          <dt>Lunes a viernes</dt>
+          <dd>7:00 a. m. a 7:00 p. m.</dd>
+          <dt>Sábados, domingos y festivos</dt>
+          <dd>6:00 a. m. a 2:00 p. m.</dd>
+        </dl>
+      </section>
 
-          <form action="" method="post">
-            <fieldset>
-              <legend>Tus datos</legend>
+      <section id="formulario-reserva">
+        <h2>¿Quieres reservar?</h2>
+        <p>
+          Para reservar con nosotros, llena el siguiente formulario con los
+          detalles de tu reserva. ¡Te esperamos!
+        </p>
+        <p>
+          Antes de empezar, puedes consultar nuestras
+          <a href="tarifas.html">tarifas y rutas</a>.
+        </p>
+        <p>Todos los campos son obligatorios, excepto los comentarios.</p>
 
-              <div class="campo">
-                <label for="nombre-usuario">Nombre completo</label>
-                <input
-                  id="nombre-usuario"
-                  type="text"
-                  name="nombre"
-                  placeholder="Ej: Pepito Pérez"
-                  autocomplete="name"
-                  minlength="3"
-                  required
-                />
-              </div>
-              <div class="fila-campos">
+        <form method="post">
+          <fieldset>
+            <legend>Tus datos</legend>
+
+            <div class="campo">
+              <label for="nombre-usuario">Nombre completo</label>
+              <input id="nombre-usuario" type="text" name="nombre" placeholder="Ej: Pepito Pérez" autocomplete="name"
+                minlength="3" required>
+            </div>
+            <div class="fila-campos">
               <div class="campo">
                 <label for="cc-usuario">Número de documento</label>
-                <input
-                  id="cc-usuario"
-                  name="documento"
-                  type="text"
-                  inputmode="numeric"
-                  pattern="[0-9]{6,10}"
-                  autocomplete="off"
-                  aria-describedby="ayuda-documento"
-                  required
-                />
-                <small id="ayuda-documento" class="ayuda"
-                  >Solo números, entre 6 y 10 dígitos.</small
-                >
+                <input id="cc-usuario" name="documento" type="text" inputmode="numeric" pattern="[0-9]{6,10}"
+                  autocomplete="off" aria-describedby="ayuda-documento" required>
+                <small id="ayuda-documento" class="ayuda">Solo números, entre 6 y 10 dígitos.</small>
               </div>
               <div class="campo">
                 <label for="celular">Número de celular</label>
-                <input
-                  id="celular"
-                  name="celular"
-                  type="tel"
-                  placeholder="Ej: 3001234567"
-                  pattern="3[0-9]{9}"
-                  autocomplete="tel-national"
-                  aria-describedby="ayuda-celular"
-                  required
-                />
-                <small id="ayuda-celular" class="ayuda"
-                  >10 dígitos, empezando por 3.</small
-                >
+                <input id="celular" name="celular" type="tel" placeholder="Ej: 3001234567" pattern="3[0-9]{9}"
+                  autocomplete="tel" aria-describedby="ayuda-celular" required>
+                <small id="ayuda-celular" class="ayuda">10 dígitos, empezando por 3.</small>
               </div>
-              </div>
-              <div class="campo">
-                <label for="email-usuario">Correo electrónico</label>
-                <input
-                  id="email-usuario"
-                  type="email"
-                  name="email"
-                  placeholder="Ej: pepito.perez@gmail.com"
-                  autocomplete="email"
-                  required
-                />
-              </div>
+            </div>
+            <div class="campo">
+              <label for="email-usuario">Correo electrónico</label>
+              <input id="email-usuario" type="email" name="email" placeholder="Ej: pepito.perez@gmail.com"
+                autocomplete="email" required>
+            </div>
 
-            </fieldset>
+          </fieldset>
 
-            <fieldset>
-              <legend>Detalles de tu reserva</legend>
-
-              <div class="campo">
-                <label for="tipo-bicicleta">Tipo de bicicleta</label>
-                <select name="tipo-bicicleta" id="tipo-bicicleta" required>
-                  <option value="ciudad">Ciudad</option>
-                  <option value="montana">Montaña</option>
-                  <option value="electrica">Eléctrica</option>
-                </select>
-              </div>
-
-              <div class="campo">
-                <label for="cantidad-bicicletas">Cantidad de bicicletas</label>
-                <input
-                  id="cantidad-bicicletas"
-                  name="cantidad-bicicletas"
-                  type="number"
-                  min="1"
-                  max="6"
-                  aria-describedby="ayuda-cantidad"
-                  required
-                />
-                <small id="ayuda-cantidad" class="ayuda"
-                  >Entre 1 y 6 bicicletas.</small
-                >
-              </div>
-
-              <div class="campo">
-                <label for="tipo-plan">Duración del alquiler</label>
-                <select name="tipo-plan" id="tipo-plan" required>
-                  <option value="hora">1 hora</option>
-                  <option value="medio-dia">Medio día (4 horas)</option>
-                  <option value="dia">Día completo</option>
-                </select>
-              </div>
-
-              <div class="campo">
-                <label for="tipo-recorrido">Recorrido guiado</label>
-                <select name="tipo-recorrido" id="tipo-recorrido">
-                  <option value="ninguno">Ninguno</option>
-                  <option value="rio-parques">Río y Parques</option>
-                  <option value="sabores-barrio">Sabores de Barrio</option>
-                  <option value="palmas">Reto Las Palmas</option>
-                </select>
-              </div>
-
-              <div class="campo">
-                <label for="fecha">Fecha de tu reserva</label>
-                <input
-                  id="fecha"
-                  name="fecha"
-                  type="date"
-                  min="2026-11-01"
-                  max="2026-12-31"
-                  required
-                />
-              </div>
-            </fieldset>
+          <fieldset>
+            <legend>Detalles de tu reserva</legend>
 
             <div class="campo">
-              <label for="comentarios">Comentarios sobre tu reserva</label>
-              <textarea
-                name="comentarios"
-                id="comentarios"
-                rows="4"
-                maxlength="300"
-                aria-describedby="ayuda-comentarios"
-              ></textarea>
-              <small id="ayuda-comentarios" class="ayuda"
-                >Opcional. Máximo 300 caracteres.</small
-              >
+              <label for="tipo-bicicleta">Tipo de bicicleta</label>
+              <select name="tipo-bicicleta" id="tipo-bicicleta" required>
+                <option value="" selected disabled>Selecciona un tipo de bicicleta</option>
+                <option value="ciudad">Ciudad</option>
+                <option value="montana">Montaña</option>
+                <option value="electrica">Eléctrica</option>
+              </select>
             </div>
 
-            <div class="campo-checkbox">
-              <input
-                type="checkbox"
-                name="politicas-alquiler"
-                id="politicas-alquiler"
-                required
-              />
-              <label for="politicas-alquiler">
-                Acepto las
-                <a href="politicas.html">políticas de alquiler</a>
-              </label>
+            <div class="campo">
+              <label for="cantidad-bicicletas">Cantidad de bicicletas</label>
+              <input id="cantidad-bicicletas" name="cantidad-bicicletas" type="number" min="1" max="6"
+                aria-describedby="ayuda-cantidad" required>
+              <small id="ayuda-cantidad" class="ayuda">Entre 1 y 6 bicicletas.</small>
             </div>
 
-            <button type="submit" class="btn-cta">Enviar reserva</button>
-          </form>
-        </section>
-      </div>
+            <div class="campo">
+              <label for="tipo-plan">Duración del alquiler</label>
+              <select name="tipo-plan" id="tipo-plan" required>
+                <option value="" selected disabled>Selecciona una duración</option>
+                <option value="hora">1 hora</option>
+                <option value="medio-dia">Medio día (4 horas)</option>
+                <option value="dia">Día completo</option>
+              </select>
+            </div>
 
-      <aside id="correo-contacto" aria-label="Contacto">
-        <p>
-          ¿Tienes alguna duda? Escríbenos a nuestro correo electrónico:
-          <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
-        </p>
-      </aside>
-    </main>
-    <a
-      class="whatsapp-flotante"
-      href="https://wa.me/573000000000"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="WhatsApp (se abre en una pestaña nueva)"
-      >WhatsApp</a
-    >
-    <footer class="pie">
-      <div class="pie__marca">
-        <p class="pie__nombre">Rueda Libre</p>
-        <address class="pie__contacto">
-          <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
-        </address>
-      </div>
+            <div class="campo">
+              <label for="tipo-recorrido">Recorrido guiado</label>
+              <select name="tipo-recorrido" id="tipo-recorrido">
+                <option value="ninguno">Ninguno</option>
+                <option value="rio-parques">Río y Parques</option>
+                <option value="sabores-barrio">Sabores de Barrio</option>
+                <option value="palmas">Reto Las Palmas</option>
+              </select>
+            </div>
 
-      <nav class="pie__menu" aria-label="Secundaria">
-        <ul>
-          <li><a href="tarifas.html">Tarifas y rutas</a></li>
-          <li><a href="reservas.html">Reservas</a></li>
-        </ul>
-      </nav>
+            <div class="campo">
+              <label for="fecha">Fecha de tu reserva</label>
+              <input id="fecha" name="fecha" type="date" min="2026-11-01" max="2026-12-31" required>
+            </div>
+          </fieldset>
 
-      <p class="pie__copy">
-        <small>&copy; <time datetime="2026">2026</time> Rueda Libre</small>
+          <div class="campo">
+            <label for="comentarios">Comentarios sobre tu reserva</label>
+            <textarea name="comentarios" id="comentarios" rows="4" maxlength="300"
+              aria-describedby="ayuda-comentarios"></textarea>
+            <small id="ayuda-comentarios" class="ayuda">Opcional. Máximo 300 caracteres.</small>
+          </div>
+
+          <div class="campo-checkbox">
+            <input type="checkbox" name="politicas-alquiler" id="politicas-alquiler" required>
+            <label for="politicas-alquiler">
+              Acepto las políticas de alquiler
+            </label>
+          </div>
+
+          <button type="submit" class="btn-cta">Enviar reserva</button>
+        </form>
+      </section>
+    </div>
+
+    <aside id="correo-contacto" aria-label="Contacto">
+      <p>
+        ¿Tienes alguna duda? Escríbenos a nuestro correo electrónico:
+        <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
       </p>
-    </footer>
+    </aside>
+  </main>
+  <a class="whatsapp-flotante" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+    aria-label="WhatsApp (se abre en una pestaña nueva)">WhatsApp</a>
+  <footer class="pie">
+    <div class="pie__marca">
+      <p class="pie__nombre">Rueda Libre</p>
+      <address class="pie__contacto">
+        <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+      </address>
+    </div>
 
-    
-  </body>
+    <nav class="pie__menu" aria-label="Secundaria">
+      <ul>
+        <li><a href="tarifas.html">Tarifas y rutas</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="../nocturna/index.html">Rueda Nocturna</a></li>
+      </ul>
+    </nav>
+
+    <p class="pie__copy">
+      <small>&copy; <time datetime="2026">2026</time> Rueda Libre</small>
+    </p>
+  </footer>
+
+
+</body>
+
 </html>
